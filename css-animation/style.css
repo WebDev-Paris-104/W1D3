@@ -1,0 +1,61 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav {
+	background-color: black;
+	color: white;
+	height: 8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#link-list {
+	list-style: none;
+	gap: 1rem;
+	display: flex;
+}
+
+#link-list {
+	& li {
+		transition: all 500ms ease-in-out 1s;
+	}
+
+	& li:hover {
+		color: dodgerblue;
+		translate: 0 -10px;
+	}
+}
+
+.box {
+	height: 4rem;
+	width: 4rem;
+	background-color: red;
+	margin: auto;
+	transition: all 1s ease-in-out;
+	animation: rotate-me 1s linear infinite;
+}
+
+@keyframes rotate-me {
+	0% {
+		rotate: 0deg;
+	}
+	50% {
+		rotate: 300deg;
+		background-color: dodgerblue;
+	}
+	100% {
+		rotate: 360deg;
+	}
+}
+
+.box:hover {
+	scale: 2;
+}
